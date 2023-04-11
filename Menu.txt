@@ -1,0 +1,516 @@
+programa
+{
+	inclua biblioteca Matematica --> Mat
+	inclua biblioteca Util --> u
+	funcao inicio()
+	{
+		inteiro opc
+		faca{
+			limpa()
+			escreva("Ola, o que deseja?\n")
+			escreva("[1] Calculos\n")
+			escreva("[2] Comparador\n")
+			escreva("[3] antecessor e sucessor\n")
+			escreva("[4] Par ou Impar\n")
+			escreva("[5] Sequencia de Numeros\n")
+			escreva("[6] Adivinhação\n")
+			escreva("[7] Fim\n")
+ 			leia(opc)
+			
+			escolha(opc)
+			{
+				caso 1: 
+				{
+				 Calculos()
+				 pare
+				}
+			     caso 2:
+			     {
+			     	Comparador()
+			     	pare
+			     }
+			     caso 3:
+			     {
+			     	ant_suc()
+			     	pare
+			     }
+
+			     caso 6:
+			     {
+			     	adiv()
+			     	pare
+			     }
+
+			     caso 4:
+			     {
+			     	par_impar()
+			     	pare
+			     }
+
+			     caso 5:
+			     {
+			     	seq()
+			     	pare	
+			     }
+
+			     caso 7:
+			     {
+			     	Fim()
+			     	pare
+			     }
+			     caso contrario:
+			     {
+			     	escreva("opção invalida")
+			     	u.aguarde(2000)
+			     }
+		    }
+			} enquanto(opc!=7)		
+	}
+	funcao Calculos()
+	{
+		limpa()
+		inteiro opc
+	faca{
+			limpa()	
+			escreva("o que deseja?\n")
+			escreva("[1] Media \n")
+			escreva("[2] Soma \n")
+			escreva("[3] Tabuada \n")
+			escreva("[4] Divisão \n")
+			escreva("[5] Multiplicação \n")
+			escreva("[6] Subtração \n")
+			escreva("[7] Area \n")
+			escreva("[8] Baskhara \n")
+			escreva("[9] Fim \n")
+ 			leia(opc)
+ 		
+			escolha(opc)
+			{
+				
+				caso 1: 
+				{ 
+						cadeia resp, vResp
+						real n1, n2, n3, n4, media
+						escreva("Ola, Deseja calcular media?\n")
+						leia(resp)
+						
+						se(resp== "sim"){
+							faca{
+							escreva("informe as notas dos 4 bimestres: \n")
+							leia(n1)
+							leia(n2)
+							leia(n3)
+							leia(n4)
+							media= (n1 + n2 + n3 + n4) / 4
+							escreva("sua media é de: " + media )
+							se(media<= 10 e media>= 9.5){
+							escreva(" Seu resultado final foi de MB\n")
+								}
+								senao se(media<= 9.5 e media>= 7.5){
+									escreva(" Seu resultado final foi de B\n")
+									}
+								senao se(media<= 7.5 e media>= 5.0){
+									escreva(" Seu resultado final foi de R\n")
+									}
+									senao escreva(" Seu resultado final foi de I\n")
+								
+								se(media>= 5){
+							escreva("\n Você foi aprovado\n")
+							}
+							senao escreva("\n Você foi reprovado\n")	
+							escreva("deseja continuar?\n")
+							leia(vResp)		
+							   } enquanto(vResp== "sim")
+						se(vResp!= "sim"){
+							escreva("Ok, Até a próxima \n")
+									  }	 
+								}
+					cadeia Vresp1
+					escreva("\n deseja voltar ao menu? \n")
+					leia(Vresp1)
+					se (Vresp1== "sim")
+					{
+						pare 
+					}
+					
+				
+				}
+											
+			     caso 2:
+			     {
+			     	limpa()
+			     	real c1, c2, soma
+			     	escreva("\n informe o 1° número: ")
+					 leia(c1)
+					 escreva("\n informe o 2° número: ")
+					 leia(c2)
+					 soma = c1 + c2
+					 escreva("\n A soma é: " + soma)
+					 cadeia Vresp
+					escreva("\n deseja voltar ao menu? \n")
+					leia(Vresp)
+					se (Vresp== "sim")
+					{
+						pare 
+					}
+					 
+			     }
+			     caso 3:
+			     {
+			     	limpa()
+			     	cadeia resp1 , resp2
+				    inteiro n
+					escreva ("Deseja saber a tabuada de um número? ")
+				     leia (resp1)
+				     
+				    se (resp1=="sim")
+				  {
+					 escreva ("informe o número: ")
+				      leia (n)
+				    para (inteiro i=1;i<=10; i++)
+				   {
+					 escreva ( n + " X " + i + " = " + (n*i))
+					 escreva ("\n")
+					 u.aguarde(1000)
+				   }
+				  }
+					 cadeia vreSp
+					escreva("\n deseja voltar ao menu? \n")
+					leia(vreSp)
+					se (vreSp== "sim")
+					{
+						pare 
+					}
+				  	
+			     }
+
+			     caso 4:
+			     {
+			     	limpa()
+			     	real d1, d2, div
+					 escreva("\ninforme o 1° número: ")
+					 leia(d1)
+					 escreva("\ninforme o 2° número: ")
+					 leia(d2)
+					 div = d1 / d2
+		 			 escreva("\n A divisão é: " + div)
+		 			 cadeia vrEsp
+					escreva("\n deseja voltar ao menu? \n")
+					leia(vrEsp)
+					se (vrEsp== "sim")
+					{
+						pare 
+					}
+			     }
+
+			     caso 5:
+			     {
+			     	limpa()
+			     	 real nu1, nu2, mult
+			     	 escreva("\ninforme o 1° número: ")
+					 leia(nu1)
+					 escreva("\ninforme o 2° número: ")
+					 leia(nu2)
+					 mult = nu1 * nu2
+					 escreva("\n A Multiplicação é: " + mult)
+					 cadeia vrEsp2
+					escreva("\n deseja voltar ao menu? \n")
+					leia(vrEsp2)
+					se (vrEsp2== "sim")
+					{
+						pare 
+					}
+			     }
+
+			     caso 6:
+			     { 
+			     	 limpa()
+			     	 real ni1, ni2, sub
+			     	 escreva("\ninforme o 1° número: ")
+					 leia(ni1)
+					 escreva("\ninforme o 2° número: ")
+					 leia(ni2)
+					 sub = ni1 - ni2
+					 escreva("\n A subtração é: " + sub)
+					 cadeia vrEsp3
+					escreva("\n deseja voltar ao menu? \n")
+					leia(vrEsp3)
+					se (vrEsp3== "sim")
+					{
+						pare 
+					}
+			     }
+
+			     caso 7:
+			     {
+			     	limpa()
+			     	inteiro ne1, ne2, area
+					escreva("\ninforme a base: ")
+					leia(ne1)
+					escreva("\ninforme a altura: ")
+					leia(ne2)
+					area = ((ne1 * ne2) / 2)
+					escreva("a área do triangulo é igual à: " + area)
+					cadeia vrEsp4
+					escreva("\n deseja voltar ao menu? \n")
+					leia(vrEsp4)
+					se (vrEsp4== "sim")
+					{
+						pare 
+					}
+			     }
+
+				caso 8:
+				{
+					 inteiro a, b, c, delta
+    
+    escreva("Digiete os valores para A: ")
+    leia(a)
+  escreva("Digiete os valores para B: ")
+    leia(b)
+      escreva("Digiete os valores para C: ")
+    leia(c)
+    delta = b * b - 4 * a * c
+
+    se(b == 0 ou c == 0)
+      	    escreva("Equação incompleta!\n")
+    senao
+    {
+	      se(delta < 0)
+	        escreva("Delta: ", delta, "\nEsta equação não possui raizes reais.\n")
+      senao
+    {
+	        se(delta == 0)
+	          escreva("Delta: ", delta, "\nEsta equação possui duas raizes reais iguais.\n")
+	        senao
+	          escreva("Delta: ", delta, "\nEsta equação possui duas raizes reais diferentes.\n")
+	
+	        escreva("(-b + ou - raiz(delta)) / (2 * a)\n")
+	        escreva("(-", b," + ou - raiz(", delta,")) / (2 * ", a,")\n")
+	        escreva("(", -1 * b," + ou - ", Matematica.raiz(delta, 2),") / ", 2 * a,"\n")
+	        escreva("\nx1 = (", -1 * b + Matematica.raiz(delta, 2),") / ", 2 * a,"\n")
+	        escreva("x1 = ", (-1 * b + Matematica.raiz(delta, 2)) / (2 * a),"\n")
+	        escreva("\nx2 = (", -1 * b - Matematica.raiz(delta, 2),") / ", 2 * a,"\n")
+	        escreva("x2 = ", (-1 * b - Matematica.raiz(delta, 2)) / (2 * a),"\n")
+      }
+    }
+
+    cadeia vrEsp2x
+					escreva("\n deseja voltar ao menu? \n")
+					leia(vrEsp2x)
+					se (vrEsp2x== "sim")
+					{
+						pare 
+					}
+					}
+			     caso 9:
+			     {
+			     	escreva("Ok Obrigado\n")
+			     	pare
+			     }
+			    
+			     caso contrario:
+			     {
+			     	escreva("opção invalida")
+			     	u.aguarde(2000)
+			     }
+		    }
+ 			} enquanto(opc!= 9)			
+	}
+	funcao Comparador()
+	{
+		inteiro opc
+		faca
+		{
+		limpa()
+		real n1, n2
+		escreva("\ninforme o primeiro numero: \n")
+		leia(n1)
+		escreva("informe o segundo numero: \n")
+		leia(n2)
+		se(n1 > n2)
+		escreva("o primeiro numero é maior que o segundo")
+		senao se (n2 > n1)
+		escreva("o segundo numero é maior que o primeiro")
+		senao
+		escreva("os dois numeros são iguais")
+		escreva("\ndeseja continuar?\n")
+		escreva("[1] Sim\n")
+		escreva("[2] Não\n")
+		leia(opc)
+		escolha(opc)
+		{
+			caso 1:
+			{
+				pare	
+			}
+
+			caso 2:
+			{
+			 	escreva("\nok, obrigado")
+			 	pare
+			}
+		}
+		}enquanto(opc!= 2)
+	}
+	funcao ant_suc()
+	
+	
+	{  
+		inteiro opc2
+		faca
+		{
+			real n1
+			escreva("Olá digite um numero: ")
+			leia(n1)
+			escreva("o antecessor do numero escolhido é: " + (n1 - 1))
+			escreva("\no sucessor do numero escolhido é: " + (n1 + 1))
+			escreva("deseja continuar?\n")
+			escreva("[1] Sim\n")
+			escreva("[2] Não\n")
+			leia(opc2)
+		escolha(opc2)
+		{
+			caso 1:
+			{
+				pare	
+			}
+
+			caso 2:
+			{
+			 	escreva("\nok, obrigado")
+			 	pare
+			}
+		}
+		}enquanto (opc2!= 2)
+	}
+	funcao Fim()
+	{
+	}
+	funcao par_impar()
+	{
+		inteiro opc
+		faca
+		{
+		    inteiro num
+		    escreva("Digite um número inteiro positivo: ")
+		    leia(num)
+		    se(num % 2 == 1)
+		    {
+		      escreva("Ímpar...\n")
+		    }
+		    senao
+		    {
+		      escreva("Par...\n")
+		    }
+		    escreva("deseja continuar?\n")
+			escreva("[1] Sim\n")
+			escreva("[2] Não\n")
+			leia(opc)
+		escolha(opc)
+		{
+			caso 1:
+			{
+				pare	
+			}
+
+			caso 2:
+			{
+			 	escreva("\nok, obrigado")
+			 	pare
+			}
+		}
+		}enquanto (opc!= 2)
+		}
+  	funcao seq()
+  	{
+  		inteiro opc
+  		faca
+  		{
+  			
+	  		real n1
+	  		escreva("escolha um numero: \n")
+	  		leia(n1)
+	  		se(n1 >= 1)
+	  		{
+	  			para(inteiro x = 1; x <= n1; x++)
+	  			{
+	  				escreva("\n", x)
+	  				u.aguarde(100)
+	  			}
+	  		}
+	  		senao
+	  		{
+	  			para(inteiro x = 1; x >= n1; x--)
+	  			{
+	  				escreva("\n", x)
+	  				u.aguarde(100)
+	  			}	
+  			}
+  			 escreva("\n deseja continuar?\n")
+			escreva("[1] Sim\n")
+			escreva("[2] Não\n")
+			leia(opc)
+	  			escolha(opc)
+			{
+				caso 1:
+				{
+					pare	
+				}
+	
+				caso 2:
+				{
+				 	escreva("\nok, obrigado")
+				 	pare
+				}
+			}
+  			
+  		} enquanto(opc!= 2)
+  	}
+  	funcao adiv()
+	{	inteiro opc
+		faca
+		{
+		inteiro sorteado
+		inteiro palpite
+		
+		escreva("\n******  JOGO DA ADVINHAÇÃO  ******\n\n")
+		escreva("Palpite: ")
+		leia(palpite)
+		escreva("\nSeu palpite foi: " + palpite + "\n")
+		sorteado = u.sorteia(1,10)
+		se(palpite == sorteado){
+			escreva("\nParabéns! Você ganhou ;-)\n")
+		} senao{
+			se(palpite > sorteado){
+				escreva("\nO seu palpite foi maior")
+				escreva("\nVocê perdeu! Tente novamente :-(\n")
+			}
+			se(palpite < sorteado){
+				escreva("\nO seu palpite foi menor")
+				escreva("\nVocê perdeu! Tente novamente :-(\n")
+			}			
+		}
+			escreva(" o numero sorteado foi: " + sorteado)
+			 escreva("\n deseja continuar?\n")
+			escreva("[1] Sim\n")
+			escreva("[2] Não\n")
+			leia(opc)
+			escolha(opc)
+			{
+				caso 1:
+				{
+					pare	
+				}
+	
+				caso 2:
+				{
+				 	escreva("\nok, obrigado")
+				 	pare
+				}
+			}
+		}enquanto(opc!= 2)
+	}
+  }
+  	
+

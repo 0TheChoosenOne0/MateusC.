@@ -1,0 +1,48 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		cadeia resp, vResp
+		real n1, n2, n3, n4, media
+		escreva("Ola, Deseja calcular media?\n")
+		leia(resp)
+		
+		se(resp== "sim"){
+			faca{
+			escreva("escolha as notas dos 4 bimestres: \n")
+			leia(n1)
+			leia(n2)
+			leia(n3)
+			leia(n4)
+			media= (n1 + n2 + n3 + n4) / 4
+			escreva("sua media é de: " + media )
+			se(media<= 10 e media>= 9.5){
+			escreva(" Seu resultado final foi de MB\n")
+				}
+				senao se(media<= 9.5 e media>= 7.5){
+					escreva(" Seu resultado final foi de B\n")
+					}
+				senao se(media<= 7.5 e media>= 5.0){
+					escreva(" Seu resultado final foi de R\n")
+					}
+					senao escreva(" Seu resultado final foi de I\n")
+				
+				se(media>= 5){
+			escreva("\n Você foi aprovado\n")
+			}
+			senao escreva("\n Você foi reprovado\n")	
+			escreva("deseja continuar?\n")
+			leia(vResp)		
+		} enquanto(vResp== "sim")
+		se(vResp!= "sim"){
+			escreva("Ok, Até a próxima")
+			}
+		}
+	
+					}
+					
+		}
+		
+	
+

@@ -1,0 +1,13 @@
+programa
+{
+	
+	funcao inicio()
+	{	
+		real n1
+		escreva("Olá digite um numero: ")
+		leia(n1)
+		escreva("o antecessor do numero escolhido é: " + (n1 - 1))
+		escreva("\no sucessor do numero escolhido é: " + (n1 + 1))
+		
+	}
+}

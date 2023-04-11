@@ -1,0 +1,21 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		cadeia Resp
+		inteiro n1, n2, area
+		escreva("deseja calcular a área de um triangulo? ")
+		leia(Resp)
+		se (Resp== "sim"){
+		escreva("\ninforme a base: ")
+		leia(n1)
+		escreva("\ninforme a altura: ")
+		leia(n2)
+		area = (n1 * n2 / 2)
+		escreva("a área do triangulo é igual à: " + area)
+			}
+			se (Resp== "não")
+			escreva("\n\nOk,Tenha uma boa tarde")
+	}
+}

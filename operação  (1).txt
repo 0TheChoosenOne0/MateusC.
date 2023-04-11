@@ -1,0 +1,34 @@
+programa
+{
+	funcao inicio ()
+	{
+		cadeia Nome,Resp,resp
+        real n1,n2, soma
+        escreva(" Boa tarde")
+		escreva("\n\ninforme seu nome:")
+		leia (Nome)
+		escreva("\nOlá " + Nome)
+		escreva("\n\nvocê deseja fazer operações com dois números? (sim/não) ")
+		leia(Resp)
+		
+		se(Resp =="sim")
+         {
+		escreva("\ninforme o 1° número: ")
+		leia(n1)
+		escreva("\ninforme o 2° número: ")
+		leia(n2)
+		soma = n1 + n2
+		escreva("\n A soma é: " + soma)
+		soma = n1 - n2
+		escreva("\n A subtração é: " + soma)
+        soma = n1 * n2
+		escreva("\n A multiplicação é: " + soma)
+        soma = n1 / n2
+		escreva("\n A divisão é: " + soma)
+		 }
+		senao 
+		 {
+        escreva("\n\nOk,Tenha uma boa tarde")
+		 }
+	}
+}

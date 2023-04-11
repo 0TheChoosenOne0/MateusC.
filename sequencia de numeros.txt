@@ -1,0 +1,45 @@
+funcao seq()
+  	{
+  		inteiro opc
+  		faca
+  		{
+  			
+	  		real n1
+	  		escreva("escolha um numero: \n")
+	  		leia(n1)
+	  		se(n1 >= 1)
+	  		{
+	  			para(inteiro x = 1; x <= n1; x++)
+	  			{
+	  				escreva("\n", x)
+	  				u.aguarde(500)
+	  			}
+	  		}
+	  		senao
+	  		{
+	  			para(inteiro x = 1; x >= n1; x--)
+	  			{
+	  				escreva("\n", x)
+	  				u.aguarde(500)
+	  			}	
+  			}
+  			 escreva("\n deseja continuar?\n")
+			escreva("[1] Sim\n")
+			escreva("[2] Não\n")
+			leia(opc)
+	  			escolha(opc)
+			{
+				caso 1:
+				{
+					pare	
+				}
+	
+				caso 2:
+				{
+				 	escreva("\nok, obrigado")
+				 	pare
+				}
+			}
+  			
+  		} enquanto(opc!= 2)
+  	}

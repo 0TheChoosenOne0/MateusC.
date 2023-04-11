@@ -1,0 +1,32 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		cadeia vNome, vResp
+		real n1, n2, soma
+		caracter vOp
+		escreva("Boa Tarde \n\n")
+		escreva("Informe o seu nome: ")
+		leia(vNome)
+		escreva("\nOlá " + vNome )
+		escreva(" Voce quer fazer operações (sim/não) ? ")
+          leia(vResp)
+          
+     se(vResp=="sim")
+     
+    {
+    		escreva(" Digite o 1º numero ")
+    		leia(n1)
+		escreva(" Digite o 2º numero ")
+		leia(n2)
+		
+		soma = n1 + n2
+		escreva(" O resultado da soma é:" + soma)
+		}
+
+		{
+    
+    }
+	}
+}

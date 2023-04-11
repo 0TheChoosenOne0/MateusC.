@@ -1,0 +1,31 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		cadeia Resp
+		real n1, n2 
+		escreva(" Olá, deseja comparar dois numeros? ")
+		leia(Resp)
+
+		se(Resp== "sim")
+		{
+		escreva("\ninforme o primeiro numero: \n")
+		leia(n1)
+		escreva("informe o segundo numero: \n")
+		leia(n2)
+
+		se(n1 > n2)
+		escreva("o primeiro numero é maior que o segundo")
+		senao se (n2 > n1)
+		escreva("o segundo numero é maior que o primeiro")
+		senao se (n1 == n2)
+		escreva("os dois numeros são iguais")
+		}
+
+		se(Resp== "não"){
+		escreva("Ok, Obrigado e até a proxima\n\n")
+		}
+		
+	}
+}
